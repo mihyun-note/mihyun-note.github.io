@@ -1,2 +1,2 @@
 # Mintendo
-mihyun-note.github.io
+https://mihyun-note.github.io/
