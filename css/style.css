@@ -1,0 +1,753 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+body{
+
+    background-image: url("../img/BackgroundNintendo_r.png");
+    background-size: center;
+    
+}
+.chip{
+    
+    position: absolute;
+    left: 60pt;
+    top: 50pt;
+    width: 50pt;
+    padding: 5pt;
+}
+
+.chip_text{
+  
+  background-color: rgba(0, 60, 138, 0.342);
+  border: 5pt ridge rgba(30, 79, 143, 0.342);
+  border-radius: 10pt;
+  padding: 3pt 20pt 5pt 20pt;
+  position: absolute;
+  left: 130pt;
+  top: 30pt;
+  font-family: 'Jeju Gothic', sans-serif;
+  line-height: 28pt;
+}
+
+.onoff{
+
+    position: absolute;
+    left: 329pt;
+    top: 473.7pt;
+    width: 22pt;
+
+}
+.offIMG{
+  z-index: 100;
+}
+.choice_button{
+    width: 380pt;
+}
+
+
+.play{ 
+
+    position: absolute;
+    left: 387pt;
+    top: 211pt;
+    z-index: 0;
+}
+
+.play_button{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1); 
+    -o-transform:scale(1);  
+    transform:scale(1);
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+}
+.play_button:hover{ 
+    -webkit-transform:scale(1.01);
+    -moz-transform:scale(1.01);
+    -ms-transform:scale(1.01);
+    -o-transform:scale(1.01);
+    transform:scale(1.01);
+    
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    left: 460pt;
+    top: 230pt;
+    width: 500pt;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 330pt;
+  }
+
+  .remove_play{
+    display: none;
+  }
+  .add_play{
+    display: block;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(37, 37, 37, 0.418);
+    line-height: 0;
+    border:8pt outset rgba(31, 163, 64, 0.685);
+    border-radius: 8px;
+    background-color: rgba(255, 248, 220, 0);
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(100% - 6vh);
+    object-fit: cover; 
+    transition: .7s;
+    
+  }
+  
+
+  
+  .box:hover { flex: 1 1 60%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .playmsg{
+    position: absolute;
+    left: 670pt;
+    top: 480pt;
+  }
+
+
+  .fade-in-box {
+    display: inline-block;
+    
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+  }
+  @keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 0.5;
+      }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 0.5;
+      }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 0.5;
+      }
+  }
+  @-o-keyframes fadein { /* Opera */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 0.5;
+      }
+  }
+
+
+.game1{
+  padding: 0;
+  margin: 0; 
+  width: 500pt;
+  height: 280pt;
+  position: relative;
+  top: 22pt;
+  left: 50pt;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: rgb(42, 40, 54);
+  border-radius: 40px;
+  border: 25pt  ridge rgba(50, 47, 65, 0.336);
+}
+
+ul {
+    position: relative;
+    display: flex;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  label {
+    position: relative;
+  }
+  
+  
+  .input_1[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    z-index: 10;
+  }
+  
+  .game1_button {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background-image: url();
+    background-color: rgb(36, 34, 46);
+    color:#00000000;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    top: -5pt;
+    left: -22pt;
+    margin: 5pt;
+    border-radius: 50px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.26), 
+      10px 10px 10px rgba(0, 0, 0, 0.404),
+      inset -1px -1px 4px rgba(255, 255, 255, 0),
+      inset 1px 1px 1px rgba(0, 0, 0, 0);
+    border:12px dotted rgb(30, 29, 39);
+  }
+  
+  
+  .input_2[type="checkbox"]:checked ~ div {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.274),
+      inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+    animation: glow 5s linear infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+.game2 {
+  width: 600pt;
+  height: 335pt;
+  position: relative;
+  top: 15pt;
+  left: 20pt;
+}
+
+canvas {
+    flex-shrink: 0;
+    background-color: #000;
+    object-fit: contain;
+    z-index: 10;
+    position:absolute; 
+    left: 495pt;
+    top: 250pt;
+    border: 10pt ridge rgb(60, 182, 96);
+
+}
+.crisp{
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+
+}
+
+.game3{
+  padding: 0;
+  margin: 0; 
+  width: 500pt;
+  height: 280pt;
+  position: relative;
+  top: 22pt;
+  left: 50pt;
+  background-color: rgb(110, 221, 255);
+  border-radius: 40px;
+  border: 25pt  ridge rgba(50, 47, 65, 0.336);
+}
+
+
+.the-container{
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-window{
+  display: block;
+  position: relative;
+  width: 235px;
+  height: 235px;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: 8px solid #4caed4;
+  background: #5ddfe8; 
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.25) inset;
+  overflow: hidden;
+  transition: background 1s ease-in-out;
+}
+
+.c-window .the-sun{
+  display: block;
+  position: relative;
+  top: 18px;
+  height: 40px; width: 40px;
+  background: #FFEE94;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 40px #FFEE94;
+  left: 30px;
+  transition: top .5s ease-in-out;
+}
+
+.c-window .the-moon{
+  position: relative;
+  height: 24px; width: 24px;
+  top: 200px;
+  background: #EEE;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px #FFF;
+  transition: top .5s ease-in-out;
+}
+
+.c-window .the-cat{
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  height: 140px;
+  width: 135px;
+  margin: 0 50px;
+  background: #ffd68f;
+  transition: bottom .25s ease-in-out;
+}
+
+.c-window .the-cat:before{
+   width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 20px solid rgb(252, 197, 80);
+    top: -20px;
+    left: 0;
+    position: absolute;
+    content: "";
+}
+.c-window .the-cat:after{
+   width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 20px solid rgb(252, 197, 80);
+    top: -20px;
+    right: 0;
+    position: absolute;
+    content: "";
+}
+
+.c-window .the-cat:hover{
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  cursor: pointer;
+}
+
+.c-window .the-cat .eyes{
+   display: block;
+  position: absolute;
+  background: #FFEE94;
+  height: 40px; width: 40px;
+  border-radius: 100%;
+  bottom: 80px;
+}
+
+.c-window .the-cat:hover .eyes{
+  display: block;
+  position: absolute;
+  height: 8px; width: 40px;
+  bottom: 100px;
+}
+
+
+.c-window .the-cat .eyes.left{
+  left: 12px;
+}
+
+.c-window .the-cat .eyes.right{
+  right: 12px;
+}
+
+.c-window .the-cat .eyes .pupil{
+   display: block;
+  position: relative;
+  background: #FFB399;
+  height: 100%; width: 5px;
+  border-radius: 100%;
+  margin: 0 auto;
+  transition: width .5s ease-in-out;
+}
+
+.c-window .the-cat .nose{
+   display: block;
+  position: relative;
+  background: #FFB399;
+  height: 10px; width: 10px;
+  border-radius: 100%;
+  margin: 0 auto;
+  top: 45px;
+}
+
+
+.input_game3[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+ .input_game3#toggle[type=checkbox]{
+     display:none;
+ }
+
+
+label {
+    position: absolute;
+    height: 40px;
+    width: 120px;
+    display: block; 
+    top: 0px; bottom: 0; right: 0; left:0;
+    z-index: 9999;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.switch {
+  display: block; 
+  position: relative;
+  border-bottom: 1px solid #FFF;
+  border-radius: 25px;
+  background: rgb(110, 221, 255);
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+  height: 40px;
+  width: 100px;
+  margin: 0px auto 30px auto;
+}
+
+.switch .button{
+  display: block; 
+  position: absolute;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #AAA;
+  border-radius: 100%;
+  background: rgb(121, 222, 253);
+  height: 32px; 
+  width: 32px;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25)
+}
+
+.switch .button .b-inside{
+  display: block; 
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 100%;
+  background: #FFEE94;
+  height: 15px; 
+  width: 15px;
+  top: 7px;
+  left: 7px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25)
+}
+
+.day-night-cont {
+  display: block;
+  position: absolute;
+  width: 180px;
+  margin: 0 auto;
+  left: 0; right: 0; top: 0; bottom:0;
+  height: 40px;
+  top: 0px;
+}
+
+.day-night-cont .the-sun{
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #FFEE94;
+  box-shadow: 0px 0px 40px #FFEE94;
+}
+
+.day-night-cont .the-moon {
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #EEE;
+  box-shadow: 0px 0px 20px #EEE;
+}
+
+.day-night-cont .the-moon .moon-inside{
+  display: block;
+  position: absolute;
+  left: 8px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: rgb(110, 221, 255);
+}
+
+/* TOGGLE */
+
+.switch .button {
+    transition: left .25s ease-in-out;
+    -webkit-transition: left .25s ease-in-out;
+}
+
+.input_game3[type=checkbox]:checked ~ .switch .button {
+    position: absolute;
+    left: 64px;
+}
+
+/* NIGHT ANIMATION */
+
+.input_game3[type=checkbox]:checked ~ .c-window {
+  background: #111;
+}
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-sun{  
+  top: 200px; 
+}
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-moon{ 
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: 40px;
+  left: 60px;  
+}
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-cat{
+  background: #444;
+}
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-cat:before{
+   width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 20px solid #444;
+    top: -20px;
+    left: 0;
+    position: absolute;
+    content: "";
+}
+.input_game3[type=checkbox]:checked ~ .c-window .the-cat:after{
+   width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 20px solid #444;
+    top: -20px;
+    right: 0;
+    position: absolute;
+    content: "";
+}
+
+
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-cat .eyes .pupil{
+  height: 90%; width: 34px;
+  margin: 5% auto;
+}
+
+.input_game3[type=checkbox]:checked ~ .c-window .the-cat:hover .eyes{
+  height: 40px; 
+  bottom: 80px;
+}
+
+
+.logo > img {
+  width: 60px;
+  height: 50px;
+  animation: watch 10s linear infinite both;
+  position: relative;
+  top: 320pt;
+  left: 290pt;
+}
+.dog_talk{
+  animation: watch2 10s linear infinite both;
+  background-color: rgba(255, 255, 255, 0.527);
+  border: 3pt solid rgba(139, 111, 17, 0.685);
+  display: inline-block;
+  padding: 5pt;
+  width: 80pt;
+  position: absolute;
+  top: 280pt;
+  left: 300pt;
+  font-size: 9.5pt;
+  font-family: 'Jeju Gothic', sans-serif;
+}
+@keyframes watch2 {
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(-50px, -10px);
+  }
+  7% {
+    transform: translate(-50px, 0px);
+  }
+  20% {
+    transform: translate(-320px, 0px);
+  }
+  25%{
+    transform: translate(-310px, 0px);
+  }
+  30%{
+    transform: translate(-270px, -8px);
+  }
+  32%{
+    transform: translate(-270px, 0px);
+  }
+  40% {
+    transform: translate(-100px, 0px);
+  }
+  60% {
+    transform: translate(180px, 0px);
+  }
+  62%{
+    transform: translate(180px, -8px);
+  }
+  65%{
+    transform: translate(180px, 0px);
+  }
+  70% {
+    transform: translate(300px, 0px);
+  }
+  75%{
+    transform: translate(330px, -8px);
+  }
+  77%{
+    transform: translate(330px, 0px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+
+/* 탑바 로고 움직임 */
+@keyframes watch {
+  0% {
+    transform: translate(0);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+  5% {
+    transform: translate(-50px, -10px);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+  7% {
+    transform: translate(-50px, 0px);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+  20% {
+    transform: translate(-320px, 0px);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+  25%{
+    transform: translate(-310px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  30%{
+    transform: translate(-270px, -8px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  32%{
+    transform: translate(-270px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  40% {
+    transform: translate(-100px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  60% {
+    transform: translate(180px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  62%{
+    transform: translate(180px, -8px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  65%{
+    transform: translate(180px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  70% {
+    transform: translate(300px, 0px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  75%{
+    transform: translate(330px, -8px);
+    background: url("../img/dog2.png");
+    background-size: 60px;
+  }
+  77%{
+    transform: translate(330px, 0px);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+  100% {
+    transform: translate(0);
+    background: url("../img/dog.png");
+    background-size: 60px;
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="javascript/game.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mintendo Switch</title>
+  </head>
+  <body>  
+    <audio id="audio_button" src="audio/audio_button.mp3"></audio>
+    <audio id="audio_game" src="audio/audio_game.mp3"></audio>
+    <audio id="audio_backg" src="audio/audio_backg.mp3"></audio>
+    <audio id="audio_switch" src="audio/audio_switch.mp3"></audio>
+    <audio id="audio_dog" src="audio/audio_dog.mp3"></audio>
+    <audio id="audio_cat" src="audio/audio_cat.mp3"></audio>
+             <input type="image" name="button" src="img/game_chip_model.png" class="chip" onclick="chip_click(); audio_switch()" title="도움말">     
+             <div class="chip_text" id = "chip_text" style="display: none; ">
+                <p style="text-align: center;">저희 Mintendo Switch는 가상의 닌텐도를 체험해 볼 수 있는 홈페이지입니다 <br>
+                  게임기는 총 3가지 테마의 장난감을 제공하고 있고 <img src="img/onoffButton.png" style="width: 13pt; border: 2pt solid rgba(0, 0, 0, 0.699); vertical-align: middle;"> 버튼을 눌러 전원을 켤 수 있습니다 <br>
+                  충전은 필요 없으니 걱정 마시고 Mintendo Switch를 사용해보세요! <br>
+                  당신의 이름: <input type="text" id="name" style="width: 40pt;"> <button onclick="input(); audio_switch()" style="background-color: rgb(161, 192, 248);">입력</button>
+                <a style="float: right">-Mihyun-</a>
+              </p>
+             </div>
+
+     <img src="img/playoff.png" id="onoff_off" class="play offIMG">
+     <img src="img/playon.gif" id="onoff_on" class="play fade-in-box" style="display: none; opacity: 50%; color: aliceblue;">
+     
+      <div>
+        <input type="image" name="button" src="img/onoffButton.png" onclick="onoff()" class="onoff" id="onoff">
+      </div>
+      <div class="container" id="view">
+        <div class="box fade-in-box" style="display: none;" id="choice">
+          <input type="image" name="button" src="img/game1.PNG" onclick="game_start()" class="choice_button">
+       </div>
+        <div class="box fade-in-box" style="display: none;" id="choice2" class="choice_button">
+          <input type="image" src="img/game2.PNG" onclick="game2_start()" class="choice_button" style="width: 320pt;">
+        </div>
+        <div class="box fade-in-box" style="display: none;" id="choice3">
+          <input type="image" name="button" src="img/game3.jpg" onclick="game3_start()" class="choice_button">
+        </div>
+        
+      </div>
+
+      <div class="play" >
+        <div class="game1 remove_play" id="play1">
+          <ul>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">G</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2"onclick="audio_switch()"/>
+              <div class="game1_button">V</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2"onclick="audio_switch()"/>
+              <div class="game1_button">♥</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">N</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">A</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">W</div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">L</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">♥</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">O</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">W</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2"onclick="audio_switch()"/>
+              <div class="game1_button">E</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">♥</div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">K</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">♥</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">N</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">O</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">♥</div>
+            </li>
+            <li>
+              <input type="checkbox" class="input_1 input_2" onclick="audio_switch()"/>
+              <div class="game1_button">O</div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="game2 remove_play" id="play2">
+          <canvas id="canvas1" class="remove_play" ></canvas>
+        </div>
+
+
+        <div class="game3 remove_play" id="play3">
+          <div class="the-container">
+  
+            <input type="checkbox" class="input_game3" id="toggle" onclick="audio_switch()"/>
+            <label for="toggle"></label>
+            
+            <div class="day-night-cont">
+                <span class="the-sun"></span>
+                <div class="the-moon"><span class="moon-inside"></span></div>
+             </div>
+            
+            <div class="switch">
+              <div class="button">
+                <div class="b-inside"></div>
+              </div>
+            </div>
+            
+            <div class="c-window">
+              
+              <span class="the-sun"></span>
+              <span class="the-moon"></span>
+              
+              <div class="the-cat" onmouseover="audio_cat()">
+                <div class="cat-face">
+                  <section class="eyes left"><span class="pupil"></span></section>
+                  <section class="eyes right"><span class="pupil"></span></section>  
+                  
+                  <span class="nose"></span>
+                </div>  
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="face">
+        <div class="hair">
+            <div class="hatfur"></div>
+        </div>
+        <div class="eyes">
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+            <div class="mus"></div>
+            <div class="mus1"></div>
+            <div class="mouth"></div>
+            <div class="mouth1"></div>
+        </div>
+
+        <div class="logo play fade-in-box" style="display: none;" id="dog">
+          <img onmouseover="audio_dog()">
+
+          <div class="play fade-in-box dog_talk" id="dog">
+            멍멍!<a id="output"></a>
+            </div>
+        </div>
+    </div>
+    
+
+      
+      
+  
+  </body>
+</html>
+
